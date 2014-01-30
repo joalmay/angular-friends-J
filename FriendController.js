@@ -5,16 +5,22 @@ app.controller("FriendController", function($scope, $http){
 
 			//console.log("friends", friends);	
 			$scope.friends=data.results;
-			
+
+			//Parse Friend Count to Integer
+			angular.forEach($scope.friends, function(friend) {
+				friend.friend_count = parseInt(friend.friend_count, 10); //Base 10
 			});
-
-	//$scope.name = "Hello World!";
-	//console.log("My Ctrl is working!");
-	//$scope.urlpic = "https://scontent-a.xx.fbcdn.net/hprofile-ash3/833_10200838803828124_1233160321_a.jpg";
-     //$scope.location = "Status: I hate the snow. I wish I was on the beach right now!!! ";
-
-
-
+			
+	});
+/*
+	$scope.myFilter = function(friend){
+		if (friend.name.toUpperCase().indexOf($scope.searchText.toUpperCase) != -1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+*/
 });
 
 
