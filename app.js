@@ -1,7 +1,8 @@
-var app = angular.module('fbapp',[]);
+var app = angular.module("fbapp",[]);
 
-app.controller('FriendController', function($scope){
-	$scope.text = "Hello World!";
+
+
+/*
 
 	$scope.friends = 
 	[{
@@ -1263,7 +1264,6 @@ app.controller('FriendController', function($scope){
         "friend_count": "1004"
 }]
 
+*/
 
-
-});
 

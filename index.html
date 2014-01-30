@@ -16,11 +16,11 @@
 <title>Facebook Lesson 18</title>
 </head>
 
-<body ng-app="fbapp" ng-controller="FriendController">
+<body ng-app="fbapp">
 
 <h1>The <strong>facebook</strong> Friend Machine</h1>
 
-<div class="friends"> The text: {{text}}
+<div class="friends" ng-controller="FriendController"> The text: {{text}}
 
 <form class="form-inline searchForm" role="form">
   <div class="form-group">
