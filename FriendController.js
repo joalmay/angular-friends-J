@@ -4,7 +4,7 @@ app.controller("FriendController", function($scope, $http){
 		.success(function(data) {
 
 			//console.log("friends", friends);	
-			$scope.friends=data.results;
+			$scope.friends = data.results;
 
 			//Parse Friend Count to Integer
 			angular.forEach($scope.friends, function(friend) {
@@ -12,6 +12,8 @@ app.controller("FriendController", function($scope, $http){
 			});
 			
 	});
+
+		$scope.sortField = "name";
 /*
 	$scope.myFilter = function(friend){
 		if (friend.name.toUpperCase().indexOf($scope.searchText.toUpperCase) != -1) {
