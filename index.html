@@ -47,16 +47,19 @@
 
   <ul>
     <li class='friend' ng-repeat="friend in friends">
-       <img class="profile-pic" ng-src="{{friend.pic_square}}" style="width: 50px, height: 50px" />
+       <img class="profile-pic" ng-src="{{friend.pic_square}}" />
       <h3>{{friend.name}}</h3>
-      <div class="location">
+      <div class="location" ng-show="friend.current_location">
         Location: {{friend.current_location.city}}, {{friend.current_location.state}}
       </div>      
-      <div class="status">
+      <div class="status" ng-show="friend.status.message">
         Status: {{friend.status.message}}
       </div>      
-      <div class="num-friends">
+      <div class="num-friends" ng-show="friend_count">
         Friends: {{friend.friend_count}}
+      </div>
+      <div class="num-friends" ng-hide="friend_count">
+        Friends: Zero!
       </div>
     </li>
   </ul>
