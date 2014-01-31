@@ -1,7 +1,6 @@
-app.controller("FriendController", function($scope, $http){
+app.controller("FriendController", function($scope, friendService){
 	
-	$http.get("https://s3.amazonaws.com/intuiplan_company_files/production/files/public/FriendData.json")
-		.success(function(data) {
+	friendService.getFriends().success(function(data) {
 
 			//console.log("friends", friends);	
 			$scope.friends = data.results;
